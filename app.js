@@ -1,10 +1,7 @@
-const p1Score = document.querySelector('p1Display');
-const p2Score = document.querySelector('p2Display');
-
-const scoreLimitSelect = document.querySelector('playto');
-const p1Button = document.querySelector('p1Button');
-const p2Button = document.querySelector('p2Button');
-const resetButton = document.querySelector('reset');
+const scoreLimitSelect = document.querySelector('#playto');
+const p1Button = document.querySelector('#p1Button');
+const p2Button = document.querySelector('#p2Button');
+const resetButton = document.querySelector('#reset');
 
 const player1 = {
   score: document.querySelector('p1Display'),
