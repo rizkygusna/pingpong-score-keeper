@@ -5,13 +5,18 @@ const p2Display = document.querySelector('#p2Display');
 
 let p1Score = 0;
 let p2Score = 0;
+let scoreLimit = document.querySelector('#playto').value;
 
 p1Button.addEventListener('click', function () {
-  p1Score += 1;
-  p1Display.innerText = p1Score;
+  if (p1Score < scoreLimit) {
+    p1Score += 1;
+    p1Display.innerText = p1Score;
+  }
 });
 
 p2Button.addEventListener('click', function () {
-  p2Score += 1;
-  p2Display.innerText = p2Score;
+  if (p2Score < scoreLimit) {
+    p2Score += 1;
+    p2Display.innerText = p2Score;
+  }
 });
