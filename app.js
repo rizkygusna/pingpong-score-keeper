@@ -17,19 +17,17 @@ let scoreLimit = scoreLimitSelect.value;
 let isGameOver = false;
 
 function changeScore(player, opponent) {
-  player.button.addEventListener('click', function () {
-    if (!isGameOver) {
-      player.score += 1;
-      if (player.score == scoreLimit) {
-        isGameOver = true;
-        player.display.classList.add('has-text-success');
-        opponent.display.classList.add('has-text-danger');
-        player.button.disabled = true;
-        opponent.button.disabled = true;
-      }
-      player.display.innerText = player.score;
+  if (!isGameOver) {
+    player.score += 1;
+    if (player.score == scoreLimit) {
+      isGameOver = true;
+      player.display.classList.add('has-text-success');
+      opponent.display.classList.add('has-text-danger');
+      player.button.disabled = true;
+      opponent.button.disabled = true;
     }
-  });
+    player.display.innerText = player.score;
+  }
 }
 
 p1.button.addEventListener('click', function () {
