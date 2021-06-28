@@ -1,12 +1,18 @@
-const p1Button = document.querySelector('#p1Button');
-const p2Button = document.querySelector('#p2Button');
+const p1 = {
+  score: 0,
+  button: document.querySelector('#p1Button'),
+  display: document.querySelector('#p1Display'),
+};
+
+const p2 = {
+  score: 0,
+  button: document.querySelector('#p2Button'),
+  display: document.querySelector('#p2Display'),
+};
+
 const resetButton = document.querySelector('#reset');
-const p1Display = document.querySelector('#p1Display');
-const p2Display = document.querySelector('#p2Display');
 const scoreLimitSelect = document.querySelector('#playto');
 
-let p1Score = 0;
-let p2Score = 0;
 let scoreLimit = scoreLimitSelect.value;
 let isGameOver = false;
 
@@ -52,8 +58,8 @@ function reset() {
   p2Score = 0;
   p1Display.innerText = p1Score;
   p2Display.innerText = p2Score;
-  p1Display.classList.remove('winner', 'loser');
-  p2Display.classList.remove('winner', 'loser');
+  p1Display.classList.remove('has-text-success', 'has-text-danger');
+  p2Display.classList.remove('has-text-success', 'has-text-danger');
   p1Button.disabled = false;
   p2Button.disabled = false;
 }
