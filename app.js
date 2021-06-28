@@ -30,6 +30,18 @@ function changeScore(player, opponent) {
   }
 }
 
+function reset() {
+  isGameOver = false;
+  p1.score = 0;
+  p2.score = 0;
+  p1.display.innerText = p1.score;
+  p2.display.innerText = p2.score;
+  p1.display.classList.remove('has-text-success', 'has-text-danger');
+  p2.display.classList.remove('has-text-success', 'has-text-danger');
+  p1.button.disabled = false;
+  p2.button.disabled = false;
+}
+
 p1.button.addEventListener('click', function () {
   changeScore(p1, p2);
 });
@@ -45,15 +57,3 @@ scoreLimitSelect.addEventListener('change', function () {
 });
 
 resetButton.addEventListener('click', reset);
-
-function reset() {
-  isGameOver = false;
-  p1Score = 0;
-  p2Score = 0;
-  p1Display.innerText = p1Score;
-  p2Display.innerText = p2Score;
-  p1Display.classList.remove('has-text-success', 'has-text-danger');
-  p2Display.classList.remove('has-text-success', 'has-text-danger');
-  p1Button.disabled = false;
-  p2Button.disabled = false;
-}
