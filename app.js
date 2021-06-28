@@ -35,7 +35,7 @@ p1.button.addEventListener('click', function () {
 });
 
 p2.button.addEventListener('click', function () {
-  changeScore(p1, p2);
+  changeScore(p2, p1);
 });
 
 scoreLimitSelect.addEventListener('change', function () {
